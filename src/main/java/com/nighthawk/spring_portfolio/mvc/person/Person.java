@@ -107,43 +107,43 @@ public class Person {
 
         // basics of class construction
         Person p1 = new Person();
-        p1.setName("Thomas Edison");
-        p1.setEmail("toby@gmail.com");
-        p1.setPassword("123Toby!");
+        p1.setName("Avinh Huynh");
+        p1.setEmail("avinhahuynh@gmail.com");
+        p1.setPassword("password");
         // adding Note to notes collection
         try {  // All data that converts formats could fail
-            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("01-01-1840");
+            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("12-27-2004");
             p1.setDob(d);
         } catch (Exception e) {
             // no actions as dob default is good enough
         }
 
         Person p2 = new Person();
-        p2.setName("Alexander Graham Bell");
-        p2.setEmail("lexb@gmail.com");
-        p2.setPassword("123LexB!");
+        p2.setName("Gabe boodrow");
+        p2.setEmail("gabreal@gmmail.com");
+        p2.setPassword("anything");
         try {
-            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("01-01-1845");
+            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("01-25-2005");
             p2.setDob(d);
         } catch (Exception e) {
         }
 
         Person p3 = new Person();
-        p3.setName("Nikola Tesla");
-        p3.setEmail("niko@gmail.com");
-        p3.setPassword("123Niko!");
+        p3.setName("soren");
+        p3.setEmail("c190@gmail.com");
+        p3.setPassword("gayforalan");
         try {
-            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("01-01-1850");
+            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("02-16-2005");
             p3.setDob(d);
         } catch (Exception e) {
         }
 
         Person p4 = new Person();
-        p4.setName("Madam Currie");
-        p4.setEmail("madam@gmail.com");
-        p4.setPassword("123Madam!");
+        p4.setName("reem57");
+        p4.setEmail("reem57@gmail.com");
+        p4.setPassword("fakepassword");
         try {
-            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("01-01-1860");
+            Date d = new SimpleDateFormat("MM-dd-yyyy").parse("05-11-2006");
             p4.setDob(d);
         } catch (Exception e) {
         }
