@@ -43,7 +43,6 @@ public class JwtApiController {
 			.maxAge(3600)
 			.sameSite("None; Secure")
 			.domain("slimeyturtles.github.io")
-			.SET_COOKIE
 			.build();
 		return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, tokenCookie.toString()).build();
 	}
