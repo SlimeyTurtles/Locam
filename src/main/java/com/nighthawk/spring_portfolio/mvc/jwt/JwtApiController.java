@@ -42,7 +42,7 @@ public class JwtApiController {
 			.path("/")
 			.maxAge(3600)
 			.sameSite("None; Secure")
-			.domain("slimeyturtles.github.io")
+			.domain("slimeyturtles.github.io/locam_frontend4/login.html")
 			.build();
 		return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, tokenCookie.toString()).build();
 	}
