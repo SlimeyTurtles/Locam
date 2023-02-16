@@ -1,4 +1,4 @@
-package com.nighthawk.spring_portfolio.mvc;
+package com.nighthawk.spring_portfolio;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
