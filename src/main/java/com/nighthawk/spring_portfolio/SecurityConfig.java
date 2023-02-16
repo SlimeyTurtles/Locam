@@ -79,7 +79,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Headers", "Content-Type", "Authorization", "x-csrf-token"))
 				.addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-MaxAge", "600"))
 				.addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Methods", "POST", "GET", "OPTIONS", "HEAD"))
-				.addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Origin", "https://slimeyturtles.github.io", "https://locam.nighthawkcodingsociety.com"))
+				.addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Origin", "https://locam.nighthawkcodingsociety.com"))
 				.and()
 			.formLogin()
                 .loginPage("/login")
