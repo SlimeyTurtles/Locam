@@ -42,7 +42,7 @@ public class JwtApiController {
 			.path("/")
 			.maxAge(3600)
 			.sameSite("None; Secure")
-			.domain("locam.nighthawkcodingsociety.com")
+			.domain("https://slimeyturtles.github.io")
 			.build();
 		return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, tokenCookie.toString()).build();
 	}
