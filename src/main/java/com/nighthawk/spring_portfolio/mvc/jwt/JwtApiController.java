@@ -42,7 +42,7 @@ public class JwtApiController {
 			.path("/")
 			.maxAge(3600)
 			.sameSite("None; Secure")
-			// .domain("example.com") // Set to backend domain
+			.domain("locam.nighthawkcodingsociety.com")
 			.build();
 		return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, tokenCookie.toString()).build();
 	}
