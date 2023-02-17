@@ -1,10 +1,10 @@
 version: '3'
 services:
   web:
-    image: java_springv1
+    image: locam_backend_v3
     build: .
     ports:
-      - "8085:8085"
+      - "8832:8832"
     volumes:
       - persistent_volume:/app/volumes
     restart: unless-stopped
@@ -14,4 +14,4 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /home/ubuntu/spring_portfolio/volumes
+      device: /home/ubuntu/tri2/t4_spiderbiters_8194_8832_8833/locam_backend
