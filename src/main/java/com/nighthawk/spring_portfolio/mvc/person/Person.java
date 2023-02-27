@@ -66,6 +66,11 @@ public class Person {
     @Size(min = 2, max = 30, message = "Name (2 to 30 chars)")
     private String name;
 
+    @NonNull
+    @Size(min = 2, max = 30, message = "Name (2 to 30 chars)")
+    private String userName;
+
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dob;
 
@@ -85,13 +90,17 @@ public class Person {
     @Column(columnDefinition = "jsonb")
     private Map<String,Map<String, Object>> stats = new HashMap<>(); 
     
+    @NotEmpty
+    private ArrayList<String> friends = new ArrayList<String>();
 
     // Constructor used when building object from an API
-    public Person(String email, String password, String name, Date dob) {
+    public Person(String email, String password, String name, Date dob, String userName, @NotEmpty ArrayList<String> friends) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.dob = dob;
+        this.userName = userName; 
+        this.friends = friends;
     }
 
     // A custom getter to return age from dob attribute
