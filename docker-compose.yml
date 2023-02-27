@@ -4,7 +4,7 @@ services:
     image: locam_backend_v3
     build: .
     ports:
-      - "8832:8832"
+      - "8832:8085"
     volumes:
       - persistent_volume:/app/volumes
     restart: unless-stopped
