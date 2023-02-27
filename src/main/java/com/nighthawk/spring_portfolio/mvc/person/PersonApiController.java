@@ -5,10 +5,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.http.ResponseEntity;
 import java.util.*;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
-
+import javax.servlet.http.HttpServletResponse;
 @RestController
 @RequestMapping("/api/person")
 public class PersonApiController {
@@ -67,7 +68,9 @@ public class PersonApiController {
     public ResponseEntity<Object> postPerson(@RequestParam("email") String email,
                                              @RequestParam("password") String password,
                                              @RequestParam("name") String name,
-                                             @RequestParam("dob") String dobString) {
+                                             @RequestParam("dob") String dobString,
+                                             @RequestParam("friends") String friends,
+                                             HttpServletResponse httpResponse) throws IOException {
         Date dob;
         try {
             dob = new SimpleDateFormat("MM-dd-yyyy").parse(dobString);
@@ -77,6 +80,7 @@ public class PersonApiController {
         // A person object WITHOUT ID will create a new record with default roles as student
         Person person = new Person(email, password, name, dob, dobString, null);
         repository.save(person);
+        httpResponse.sendRedirect("https://slimeyturtles.github.io/locam_frontend4/");
         return new ResponseEntity<>(email +" is created successfully", HttpStatus.CREATED);
     }
 
@@ -121,6 +125,7 @@ public class PersonApiController {
             repository.save(person);  // conclude by writing the stats updates
 
             // return Person with update Stats
+            
             return new ResponseEntity<>(person, HttpStatus.OK);
         }
         // return Bad ID
